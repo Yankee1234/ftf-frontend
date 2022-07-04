@@ -1,0 +1,19 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+
+.background{
+    background-image: url('public/arts/art-3.jpg');
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        background-position: center;
+
+        height:100%;
+  width:100%;
+  overflow:hidden;
+}

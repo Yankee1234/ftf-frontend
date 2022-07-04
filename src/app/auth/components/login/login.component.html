@@ -1,0 +1,20 @@
+<div class="login-box">
+    <h1 class="h1-one">LOGIN</h1>
+    <h2 *ngIf="emptyInputs">Login or password field is empty</h2>
+    <h2 *ngIf="invalidCredentials">Incorrect login or password</h2>
+
+    <form [formGroup]="loginForm">
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="login">
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" formControlName="password">
+        <label>Password</label>
+      </div>
+    <button class="login-button" (click)="login()">LOGIN</button>
+    <br>
+    <h1 class="h1-one">Can't login? May be register?</h1>
+    <button class="register-button" (click)="redirectToRegister()">REGISTER</button>
+    </form>
+</div>
