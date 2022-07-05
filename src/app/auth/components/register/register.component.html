@@ -1,12 +1,14 @@
 <div class="login-box">
     <h1 class="h1-one">REGISTRATION</h1>
+    <h2 *ngIf="emptyInputs">Login or password field is empty</h2>
+    <h2 *ngIf="invalidCredentials">Incorrect login or password</h2>
     <form [formGroup]="registerForm">
     <div class="user-box">
-      <input type="text" name="" required="" formControlName="login">
-      <label>Username</label>
+      <input type="text" name="" required="true" formControlName="login">
+      <label>Login</label>
     </div>
     <div class="user-box">
-        <input type="email" name="" required="" formControlName="email">
+        <input type="text" name="" required="true" formControlName="email">
         <label>Email</label>
       </div>
       <div class="user-box">
@@ -14,10 +16,10 @@
         <label>Username</label>
       </div>
     <div class="user-box">
-      <input type="password" name="" required="" formControlName="password">
+      <input type="password" name="" required="true" formControlName="password">
       <label>Password</label>
     </div>
-  <button class="register-button" >REGISTER</button>
+  <button class="register-button" (click)="register()">REGISTER</button>
   <br>
   <h1 class="h1-one">Sure have an account?</h1>
   <button class="login-button" (click)="redirectToLogin()">LOGIN</button>

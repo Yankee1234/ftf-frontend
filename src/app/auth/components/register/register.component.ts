@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,11 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
+  @Input() loginPattern = '^[a-z0-9_-]{8,15}$';
+  @Input() emailPattern = '';
+  @Input() passwordPattern = '';
+  emptyInputs: boolean = false;
+  invalidCredentials = false;
 
   constructor(private readonly router: Router) {
     this.registerForm = this.createRegisterForm();
@@ -31,7 +36,10 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    const login = this.registerForm.getRawValue();
+    const { login, password, email, userName } = this.registerForm.getRawValue();
+    if(login === '' || password === '' || email === '') {
+      
+    } 
   }
 
 }
