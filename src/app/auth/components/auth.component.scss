@@ -15,34 +15,39 @@
   text-align: center;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .bg-container {
   background-image: url(../../public/arts/art-3.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: auto;
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 a {
   color: white;
   text-decoration: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: normal;
 }
 
 h2 {
   font-size: 14px;
   margin-bottom: 30px;
-  color: #24E2B8;
+  color: #24e2b8;
 }
 
-.one, .two{
+.one,
+.two {
   border: none;
   border-radius: 4px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
@@ -55,61 +60,83 @@ h2 {
   outline: none;
   cursor: pointer;
   width: 100%;
-  -webkit-transition: background-position .7s,box-shadow .4s;
-  transition: background-position .7s,box-shadow .4s;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
   background-size: 110%;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
-.one:hover, .two:hover {
+.one:hover,
+.two:hover {
   background-position: 0% 30%;
 }
-.one:hover:after, .two:hover:after {
+.one:hover:after,
+.two:hover:after {
   right: -40px;
-  -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
-  transition: right .4s,-webkit-transform 30s .2s linear;
-  transition: right .4s,transform 30s .2s linear;
-  transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
 }
-.one:before,.one:after, .two:before, .two:after{
+.one:before,
+.one:after,
+.two:before,
+.two:after {
   font-family: FontAwesome;
   display: block;
   position: absolute;
 }
-.one:before, .two:before{
+.one:before,
+.two:before {
   -webkit-transition: all 1s;
   transition: all 1s;
   font-size: 30px;
   left: 25px;
   top: 19px;
 }
-.one:after, .two:after{
-  -webkit-transition: right .4s, -webkit-transform .2s;
-  transition: right .4s, -webkit-transform .2s;
-  transition: right .4s, transform .2s;
-  transition: right .4s, transform .2s, -webkit-transform .2s;
+.one:after,
+.two:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
   font-size: 100px;
-  opacity: .3;
+  opacity: 0.3;
   right: -120px;
   top: -17px;
 }
 
 .one {
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #23FF04;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#23FF04)), to(rgba(126, 94, 162, 0.51)), url('../../public/arts/art-2.jpg');
-  background-image: linear-gradient(to bottom, #23FF04, rgba(126, 94, 162, 0.51)), url("../../public/arts/art-2.jpg");
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#23ff04)
+    ),
+    to(rgba(126, 94, 162, 0.51)), url("../../public/arts/art-2.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      #23ff04,
+      rgba(126, 94, 162, 0.51)
+    ),
+    url("../../public/arts/art-2.jpg");
 }
 .one:hover {
-  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #782CDA;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
 }
 .one:hover:after {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 .one:hover:before {
   -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  transform: scale(1.2);
 }
-.one:after, .one:before {
+.one:after,
+.one:before {
   content: "";
 }
 .one b {
@@ -118,87 +145,93 @@ h2 {
 }
 
 .two:hover {
-    background-position: 0% 30%;
-  }
-  .two:hover:after {
-    right: -40px;
-    -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
-    transition: right .4s,-webkit-transform 30s .2s linear;
-    transition: right .4s,transform 30s .2s linear;
-    transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
-  }
-  .two:before,.two:after{
-    font-family: FontAwesome;
-    display: block;
-    position: absolute;
-  }
-  .two:before{
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    font-size: 30px;
-    left: 25px;
-    top: 19px;
-  }
-  .two:after{
-    -webkit-transition: right .4s, -webkit-transform .2s;
-    transition: right .4s, -webkit-transform .2s;
-    transition: right .4s, transform .2s;
-    transition: right .4s, transform .2s, -webkit-transform .2s;
-    font-size: 100px;
-    opacity: .3;
-    right: -120px;
-    top: -17px;
-  }
-  
-  .two {
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #23FF04;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#66058d)), to(rgba(126, 94, 162, 0.51)), url("https://picstatio.com/large/dca917/samurai-ghost-of-tsushima-game-art.jpg");
-    background-image: linear-gradient(to bottom, #23FF04, rgba(126, 94, 162, 0.51)), url("https://picstatio.com/large/dca917/samurai-ghost-of-tsushima-game-art.jpg");
-  }
-  .two:hover {
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #782CDA;
-  }
-  .two:hover:after {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  .two:hover:before {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  .two:after, .one:before {
-    content: "";
-  }
-  .two b {
-    color: E7F2E5;
-    font-weight: 700;
-  }
+  background-position: 0% 30%;
+}
+.two:hover:after {
+  right: -40px;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
+}
+.two:before,
+.two:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.two:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 19px;
+}
+.two:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
+  font-size: 100px;
+  opacity: 0.3;
+  right: -120px;
+  top: -17px;
+}
+
+.two {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#66058d)
+    ),
+    to(rgba(126, 94, 162, 0.51)),
+    url("https://picstatio.com/large/dca917/samurai-ghost-of-tsushima-game-art.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      #23ff04,
+      rgba(126, 94, 162, 0.51)
+    ),
+    url("https://picstatio.com/large/dca917/samurai-ghost-of-tsushima-game-art.jpg");
+}
+.two:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
+}
+.two:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.two:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.two:after,
+.one:before {
+  content: "";
+}
+.two b {
+  color: E7F2E5;
+  font-weight: 700;
+}
 
 .h1-one {
-        font-size: 3vmin;
-        line-height: 1.1;
-        background: linear-gradient(
-    to right, 
-    hsl(98 100% 62%), 
-    hsl(204 100% 59%)
-  );
+  font-size: 3vmin;
+  line-height: 1.1;
+  background: linear-gradient(to right, hsl(98 100% 62%), hsl(204 100% 59%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
 .h1-two {
-    font-size: 3vmin;
-        line-height: 1.1;
-        background: linear-gradient(
-    to right, 
-    rgb(48, 18, 216), 
-    rgb(186, 215, 235)
-  );
+  font-size: 3vmin;
+  line-height: 1.1;
+  background: linear-gradient(to right, rgb(48, 18, 216), rgb(186, 215, 235));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
-
-
-

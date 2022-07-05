@@ -4,22 +4,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
+  constructor(private readonly router: Router) {}
 
-  constructor(private readonly router: Router) { }
-
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   loginButtonClick() {
-    console.log('login')
+    console.log('login');
     this.router.navigate(['/auth/login']);
   }
 
   registerButtonClick() {
     this.router.navigate(['/auth/register']);
+  }
+
+  async googleLogin() {
+    console.log('here');
   }
 }

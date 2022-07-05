@@ -6,15 +6,19 @@ import { RegisterComponent } from './components/register/register.component';
 import { NotAuthGuard } from './guards/not-auth.guard';
 
 const routes: Routes = [
-  { path: 'auth', canActivate: [NotAuthGuard], children: [
-    { path: 'login', component: LoginComponent},
-    { path: 'register', component: RegisterComponent},
-    { path: '', component: AuthComponent}
-  ]}
+  {
+    path: 'auth',
+    canActivate: [NotAuthGuard],
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent },
+      { path: '', component: AuthComponent },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}
