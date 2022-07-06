@@ -10,6 +10,7 @@ import { UserInfo } from './dtos/user-info.dto';
 import jwt_decode from 'jwt-decode';
 import { AuthRegisterRequest } from './dtos/auth-register-request.dto';
 import { JwtDecodedInfo } from '../domain/interfaces';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ import { JwtDecodedInfo } from '../domain/interfaces';
 export class AuthService {
   private readonly httpClient: AxiosInstance;
 
-  constructor() {
+  constructor(private readonly router: Router) {
     this.httpClient = axios.create({
       baseURL: `${BACKEND_APP_URL}/auth`,
     });
@@ -34,7 +35,7 @@ export class AuthService {
           const token = data.data;
           const decoded = jwt_decode(token) as JwtDecodedInfo;
 
-          this.putTokenInLocalStorage(
+          this.putUserInfoInLocalStorage(
             USER_INFO,
             new UserInfo(decoded.login, decoded.id, decoded.role, token)
           );
@@ -66,7 +67,7 @@ export class AuthService {
           const token = data.data;
           const decoded = jwt_decode(token) as JwtDecodedInfo;
 
-          this.putTokenInLocalStorage(
+          this.putUserInfoInLocalStorage(
             USER_INFO,
             new UserInfo(decoded.login, decoded.id, decoded.role, token)
           );
@@ -77,7 +78,30 @@ export class AuthService {
     });
   }
 
-  private putTokenInLocalStorage(key: string, data: UserInfo) {
+  private putUserInfoInLocalStorage(key: string, data: UserInfo) {
     localStorage.setItem(key, JSON.stringify(data));
+  }
+
+  getUserInfoFromLocalStorage(key: string): UserInfo {
+    const info = localStorage.getItem(key);
+    if(!info) throw new Error('There is no data in local storage by this key');
+
+    return JSON.parse(info);
+  }
+
+  isUserInfoInLocalStorage(key: string): boolean {
+    const info = localStorage.getItem(key);
+    if(!info) return false;
+
+    return true;
+  }
+
+  redirectToMain() {
+    this.router.navigate(['/main'])
+  }
+
+  logout() {
+    localStorage.removeItem(USER_INFO);
+    this.router.navigate(['/auth']);
   }
 }

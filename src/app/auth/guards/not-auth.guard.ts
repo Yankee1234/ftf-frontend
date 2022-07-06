@@ -3,22 +3,24 @@ import {
   ActivatedRouteSnapshot,
   CanActivate,
   RouterStateSnapshot,
-  UrlTree,
 } from '@angular/router';
-import { Observable } from 'rxjs';
+import { USER_INFO } from 'src/app/domain/constants';
+import { AuthService } from '../auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotAuthGuard implements CanActivate {
-  canActivate(
+  constructor(private readonly authService: AuthService) {}
+  async canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
-    | Promise<boolean | UrlTree>
-    | boolean
-    | UrlTree {
-    return true;
+    state: RouterStateSnapshot,
+  ): Promise<boolean>{
+    const result = this.authService.isUserInfoInLocalStorage(USER_INFO);
+
+    if(result.toString() === 'false') return true;
+    this.authService.redirectToMain();
+    
+    return false;
   }
 }

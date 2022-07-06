@@ -1,8 +1,8 @@
 export class UserInfo {
   constructor(
-    private readonly login: string,
-    private readonly id: number,
-    private readonly role: string,
-    private readonly token: string
+    readonly login: string,
+    readonly id: number,
+    readonly role: string,
+    readonly token: string
   ) {}
 }
