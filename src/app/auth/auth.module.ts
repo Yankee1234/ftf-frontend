@@ -7,6 +7,8 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './components/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
+import { AuthGuard } from './guards/auth.guard';
+import { NotAuthGuard } from './guards/not-auth.guard';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, AuthComponent],
@@ -18,20 +20,8 @@ import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
   ],
   providers: [
     AuthService,
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: true, //keeps the user signed in
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '148517665605-jspahbqleats6lv**********2c11b5g7o.apps.googleusercontent.com'
-            ), // your client id
-          },
-        ],
-      },
-    },
+    AuthGuard,
+    NotAuthGuard
   ],
 })
 export class AuthModule {}

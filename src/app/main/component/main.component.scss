@@ -1,0 +1,446 @@
+/* Profile button styles */
+.btn-profile {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+    border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.6s ease-out;
+}
+
+.btn-profile-2 {
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-size: 100%;
+    font-family: "Oswald", sans-serif;
+}
+
+.btn-profile-3 {
+    position: fixed;
+    background: linear-gradient(to left, rgb(25, 0, 255), transparent 40%);
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    bottom: -140px;
+    left: -45px;
+    -webkit-transform: rotate(-45deg);
+    transition: opacity 1s ease-out;
+}
+
+.btn-profile:hover > .btn-profile-3 {
+    display: block;
+    opacity: 1;
+}
+
+.btn-profile-2 {
+  background-image:
+    url("../../public/arts/art-2.jpg");
+    width: 500px;
+    height: 500px;
+    position: center;
+    bottom: -180px;
+    left: -110px;
+    -webkit-transform: rotate(-45deg);
+    background-size: cover;
+}
+
+.btn-profile {
+    width: 250px;
+    height: 250px;
+    -webkit-transform: rotate(45deg);
+}
+
+.container-profile {
+    width: 334px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 52.2%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+.btn-profile:hover {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 15px 0px rgb(25, 0, 255);
+    -webkit-transform: rotate(45deg) scale(1.2);
+}
+
+.h1-profile {
+    font-size: 40px;
+    line-height: 1.5;
+    background: linear-gradient(to right, rgb(91, 248, 0), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    left: 25px;
+    bottom: 60px;
+    position: fixed;
+    text-shadow: rgb(30, 255, 0) 1px 0 10px;;
+    transition: all 0.5s;
+    font:400;
+    -webkit-transform: rotate(-45deg);
+    height: 100px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.btn-profile:hover > .h1-profile {
+    font-size: 45px;
+    text-shadow: rgb(43, 255, 0) 1px 0 15px;
+}
+
+/* Profile button styles */
+
+/* Shop button styles */
+
+.container-shop {
+    width: 334px;
+    margin: 0 auto;
+    position: absolute;
+    top: 29%;
+    left: 5px;
+    text-align: center;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+}
+
+.btn-shop {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+    border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.6s ease-out;
+}
+
+.btn-shop {
+    width: 250px;
+    height: 250px;
+    -webkit-transform: rotate(45deg);
+}
+
+.btn-shop:hover {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 15px 0px rgb(229, 255, 0);
+    -webkit-transform: rotate(45deg) scale(1.2);
+}
+
+.btn-shop-2 {
+    background-image:
+    url("../../public/arts/art-2.jpg");
+    width: 700px;
+    height: 700px;
+    position: center;
+    bottom: -260px;
+    left: -20px;
+    -webkit-transform: rotate(-45deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-shop-2 {
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-size: 100%;
+    font-family: "Oswald", sans-serif;
+}
+
+.btn-shop-3 {
+    position: fixed;
+    background: linear-gradient(to left, rgb(229, 255, 0), transparent 40%);
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    bottom: -80px;
+    left: -45px;
+    -webkit-transform: rotate(-135deg);
+    transition: opacity 1s ease-out;
+}
+
+.btn-shop:hover > .btn-shop-3 {
+    display: block;
+    opacity: 1;
+}
+
+.h1-shop {
+    font-size: 40px;
+    line-height: 1.5;
+    background: linear-gradient(to right, rgb(91, 248, 0), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    left: 25px;
+    bottom: 60px;
+    position: fixed;
+    text-shadow: rgb(30, 255, 0) 1px 0 10px;;
+    transition: all 0.5s;
+    font:400;
+    -webkit-transform: rotate(-45deg);
+    height: 100px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.btn-shop:hover > .h1-shop {
+    font-size: 45px;
+    text-shadow: rgb(43, 255, 0) 1px 0 15px;
+}
+
+/* Shop button styles */
+
+/* Chat button styles */
+
+.container-chat {
+    width: 334px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    right: 22%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+}
+
+.btn-chat {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+    border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.6s ease-out;
+}
+
+.btn-chat {
+    width: 250px;
+    height: 250px;
+    -webkit-transform: rotate(45deg);
+}
+
+.btn-chat-2 {
+    background-image:
+    url("../../public/arts/art-2.jpg");
+    width: 700px;
+    height: 700px;
+    position: center;
+    bottom: -260px;
+    left: -20px;
+    -webkit-transform: rotate(-45deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-chat-2 {
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-size: 100%;
+    font-family: "Oswald", sans-serif;
+}
+
+.btn-chat-3 {
+    position: fixed;
+    background: linear-gradient(to left, rgb(225, 0, 255), transparent 40%);
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    bottom: -80px;
+    left: -45px;
+    -webkit-transform: rotate(-225deg);
+    transition: opacity 1s ease-out;
+}
+
+.btn-chat:hover > .btn-chat-3 {
+    display: block;
+    opacity: 1;
+}
+
+.btn-chat:hover {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 15px 0px rgb(225, 0, 255);
+    -webkit-transform: rotate(45deg) scale(1.2);
+}
+
+.h1-chat {
+    font-size: 40px;
+    line-height: 1.5;
+    background: linear-gradient(to right, rgb(91, 248, 0), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    left: 25px;
+    bottom: 60px;
+    position: fixed;
+    text-shadow: rgb(30, 255, 0) 1px 0 10px;;
+    transition: all 0.5s;
+    font:400;
+    -webkit-transform: rotate(-45deg);
+    height: 100px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.btn-chat:hover > .h1-chat {
+    font-size: 45px;
+    text-shadow: rgb(43, 255, 0) 1px 0 15px;
+}
+/* Chat button styles */
+
+/* Forum button styles */
+
+.container-forum {
+    width: 334px;
+    margin: 0 auto;
+    position: absolute;
+    top:71%;
+    left: 5px;
+    text-align: center;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    
+}
+
+.btn-forum {
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+    border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  font-size: 20px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.6s ease-out;
+}
+
+.btn-forum {
+    width: 250px;
+    height: 250px;
+    -webkit-transform: rotate(45deg);
+}
+
+.btn-forum-2 {
+    background-image:
+    url("../../public/arts/art-2.jpg");
+    width: 700px;
+    height: 700px;
+    position: center;
+    bottom: -260px;
+    left: -20px;
+    -webkit-transform: rotate(-45deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-forum-2 {
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+    overflow: hidden;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-size: 100%;
+    font-family: "Oswald", sans-serif;
+}
+
+.btn-forum-3 {
+    position: fixed;
+    background: linear-gradient(to left, #ff0000, transparent 40%);
+    opacity: 0;
+    width: 400px;
+    height: 400px;
+    bottom: -20px;
+    left: -45px;
+    -webkit-transform: rotate(-315deg);
+    transition: opacity 1s ease-out;
+}
+
+.btn-forum:hover > .btn-forum-3 {
+    display: block;
+    opacity: 1;
+}
+
+.btn-forum:hover {
+    box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 15px 0px #ff0000;
+    -webkit-transform: rotate(45deg) scale(1.2);
+}
+
+.h1-forum {
+    font-size: 40px;
+    line-height: 1.5;
+    background: linear-gradient(to right, rgb(91, 248, 0), rgb(51, 255, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    left: 25px;
+    bottom: 60px;
+    position: fixed;
+    text-shadow: rgb(30, 255, 0) 1px 0 10px;;
+    transition: all 0.5s;
+    font:400;
+    -webkit-transform: rotate(-45deg);
+    height: 100px;
+    width: 200px;
+    font-weight: 900;
+}
+
+.btn-forum:hover > .h1-forum {
+    font-size: 45px;
+    text-shadow: rgb(43, 255, 0) 1px 0 15px;
+}
+
+/* Forum button styles */
