@@ -25,11 +25,11 @@ export class AuthGuard implements CanActivate {
 
     const expiredDate = new Date(decoded.exp);
 
-    if(expiredDate < new Date()) {
+    if (expiredDate < new Date()) {
       this.authService.logout();
       return false;
     }
-    
+
     return true;
   }
 }
