@@ -18,10 +18,6 @@ import { NotAuthGuard } from './guards/not-auth.guard';
     ReactiveFormsModule,
     SocialLoginModule,
   ],
-  providers: [
-    AuthService,
-    AuthGuard,
-    NotAuthGuard
-  ],
+  providers: [AuthService, AuthGuard, NotAuthGuard],
 })
 export class AuthModule {}

@@ -1,0 +1,60 @@
+<div class="profile-container">
+  <nav class="navMenu">
+    <button [ngClass]="credentialsChosen ? 'button-chosen' : ''">
+      PROFILE
+    </button>
+    <button *ngIf="yourProfile" [ngClass]="paymentsChosen ? 'button-chosen' : ''">PAYMENTS</button>
+    <button *ngIf="yourProfile" [ngClass]="paymentsChosen ? 'button-chosen' : ''">
+      NOTIFICATIONS
+    </button>
+    <div class="dot"></div>
+  </nav>
+  <b class="avatarNameLabel">Yankee12345778</b>
+  <div class="avatar-container"></div>
+  <div class="card-container">
+    <!-- Its profile details block -->
+    <div *ngIf="credentialsChosen" class="card">
+      <div *ngIf="!updateProfile">
+        <b class="userNameLabel">USERNAME :</b
+        ><b class="userName">Yankee1234</b>
+        <b class="emailLabel">EMAIL :</b>
+        <b class="email">vovandemort2013@gmail.com</b>
+        <b class="gamesLabel">FAVOURITE GAMES</b>
+        <ul>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+          <li class="favourite-li">Yes</li>
+        </ul>
+
+        <div class="dropdown">
+          <button class="dropbtn">ADD GAME</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Its profile details block -->
+
+    <!-- Its payments block -->
+        <div *ngIf="yourProfile"></div>
+    <!-- Its payments block -->
+  </div>
+</div>
+
+<button class="button-back">
+  <b>BACK TO MAIN</b>
+</button>

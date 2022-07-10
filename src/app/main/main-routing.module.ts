@@ -4,13 +4,11 @@ import { AuthGuard } from '../auth/guards/auth.guard';
 import { MainComponent } from './component/main.component';
 
 const routes: Routes = [
-  { path: 'main', children: [
-    { path: '', component: MainComponent}
-  ] }
+  { path: 'main', children: [{ path: '', component: MainComponent }] },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class MainRoutingModule{}
+export class MainRoutingModule {}

@@ -4,20 +4,11 @@ import { MainComponent } from './component/main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { AuthModule } from '../auth/auth.module';
 import { AuthGuard } from '../auth/guards/auth.guard';
-
-
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
-  declarations: [
-    MainComponent
-  ],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    AuthModule
-  ],
-  providers: [
-    AuthGuard
-  ]
+  declarations: [MainComponent],
+  imports: [CommonModule, MainRoutingModule, AuthModule, ProfileModule],
+  providers: [AuthGuard],
 })
-export class MainModule { }
+export class MainModule {}
