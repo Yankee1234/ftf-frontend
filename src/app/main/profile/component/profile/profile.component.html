@@ -1,32 +1,19 @@
 <div class="profile-container">
   <nav class="navMenu">
-<<<<<<< HEAD
     <button [ngClass]="credentialsChosen ? 'button-chosen' : ''" (click)="chooseCredentials()">
       PROFILE
     </button>
     <button [ngClass]="paymentsChosen ? 'button-chosen' : ''" (click)="choosePayments()">PAYMENTS</button>
     <button [ngClass]="notificationsChosen ? 'button-chosen' : ''" (click)="chooseNotifications()">
-=======
-    <button [ngClass]="credentialsChosen ? 'button-chosen' : ''">
-      PROFILE
-    </button>
-    <button *ngIf="yourProfile" [ngClass]="paymentsChosen ? 'button-chosen' : ''">PAYMENTS</button>
-    <button *ngIf="yourProfile" [ngClass]="paymentsChosen ? 'button-chosen' : ''">
->>>>>>> dev
       NOTIFICATIONS
     </button>
     <div class="dot"></div>
   </nav>
-<<<<<<< HEAD
   <b class="avatarNameLabel">{{userProfile.userName}}</b>
-=======
-  <b class="avatarNameLabel">Yankee12345778</b>
->>>>>>> dev
   <div class="avatar-container"></div>
   <div class="card-container">
     <!-- Its profile details block -->
     <div *ngIf="credentialsChosen" class="card">
-<<<<<<< HEAD
         <b class="userNameLabel">USERNAME :</b
         ><b class="userName">{{ userProfile.userName}}</b>
         <b class="emailLabel">EMAIL :</b>
@@ -34,51 +21,18 @@
         <b class="gamesLabel">FAVOURITE GAMES</b>
         <ul>
           <li class="favourite-li" *ngFor="let game of userProfile.games">{{game.name}}</li>
-=======
-      <div *ngIf="!updateProfile">
-        <b class="userNameLabel">USERNAME :</b
-        ><b class="userName">Yankee1234</b>
-        <b class="emailLabel">EMAIL :</b>
-        <b class="email">vovandemort2013@gmail.com</b>
-        <b class="gamesLabel">FAVOURITE GAMES</b>
-        <ul>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
-          <li class="favourite-li">Yes</li>
->>>>>>> dev
         </ul>
 
         <div class="dropdown">
           <button class="dropbtn">ADD GAME</button>
           <div class="dropdown-content">
-<<<<<<< HEAD
             <a *ngFor="let game of allGames">{{game.name}}</a>
           </div>
         </div>
-=======
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div>
-      </div>
->>>>>>> dev
     </div>
     <!-- Its profile details block -->
 
     <!-- Its payments block -->
-<<<<<<< HEAD
     <div *ngIf="paymentsChosen" class="card">
       <div class="wrapper">
         <div class="tabs">
@@ -101,17 +55,10 @@
         <p>Example line outside of tab box</p>
       </div>
     </div>
-=======
-        <div *ngIf="yourProfile"></div>
->>>>>>> dev
     <!-- Its payments block -->
   </div>
 </div>
 
-<<<<<<< HEAD
 <button class="button-back" (click)="redirectToMain()">
-=======
-<button class="button-back">
->>>>>>> dev
   <b>BACK TO MAIN</b>
 </button>

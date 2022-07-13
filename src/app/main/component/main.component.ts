@@ -18,6 +18,6 @@ export class MainComponent implements OnInit {
 
   redirectToProfile() {
     const data = this.authService.getUserInfoFromLocalStorage(USER_INFO);
-    this.router.navigate(['/main/profile', { id: data.id }]);
+    this.router.navigate(['/main/profile/me']);
   }
 }
