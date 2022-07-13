@@ -39,6 +39,8 @@ export class AuthService {
             USER_INFO,
             new UserInfo(decoded.login, decoded.id, decoded.role, token)
           );
+
+          resolve(undefined);
         })
         .catch((err: any) => {
           const statusCode = err.response.data.statusCode;
@@ -90,8 +92,8 @@ export class AuthService {
   }
 
   isUserInfoInLocalStorage(key: string): boolean {
-    const info = localStorage.getItem(key);
-    if(!info) return false;
+    const result = localStorage.getItem(USER_INFO);
+    if (result === null) return false;
 
     return true;
   }
@@ -100,8 +102,11 @@ export class AuthService {
     this.router.navigate(['/main'])
   }
 
-  logout() {
+  logout(redirect = true) {
     localStorage.removeItem(USER_INFO);
-    this.router.navigate(['/auth']);
+    if(redirect.toString() === 'true') {
+      this.router.navigate(['/auth']);
+    }
+    
   }
 }

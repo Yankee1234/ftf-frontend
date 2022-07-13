@@ -8,7 +8,6 @@ import { AuthComponent } from './components/auth.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
 import { AuthGuard } from './guards/auth.guard';
-import { NotAuthGuard } from './guards/not-auth.guard';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, AuthComponent],
@@ -18,10 +17,6 @@ import { NotAuthGuard } from './guards/not-auth.guard';
     ReactiveFormsModule,
     SocialLoginModule,
   ],
-  providers: [
-    AuthService,
-    AuthGuard,
-    NotAuthGuard
-  ],
+  providers: [AuthService, AuthGuard],
 })
 export class AuthModule {}

@@ -14,7 +14,8 @@ import { AuthGuard } from '../auth/guards/auth.guard';
   imports: [
     CommonModule,
     MainRoutingModule,
-    AuthModule
+    AuthModule,
+    
   ],
   providers: [
     AuthGuard

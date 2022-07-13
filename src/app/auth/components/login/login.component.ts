@@ -21,7 +21,10 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.createLoginForm();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('logout');
+    this.authService.logout(false);
+  }
 
   private createLoginForm() {
     return new FormGroup({
@@ -33,6 +36,7 @@ export class LoginComponent implements OnInit {
   async login() {
     const { login, password } = this.loginForm.getRawValue();
 
+    
     if (login && password && login !== '' && password !== '') {
       const result = await this.authService.login({
         login: login,
@@ -42,6 +46,8 @@ export class LoginComponent implements OnInit {
         this.invalidCredentials = true;
         this.emptyInputs = false;
       }
+
+      this.router.navigate(['/main']);
     } else {
       this.emptyInputs = true;
       this.invalidCredentials = false;

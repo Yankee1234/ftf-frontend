@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent implements OnInit {
-  constructor(private readonly router: Router) {}
+  constructor(private readonly router: Router, private readonly authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('logout');
+    this.authService.logout(false);
+  }
 
   loginButtonClick() {
     console.log('login');

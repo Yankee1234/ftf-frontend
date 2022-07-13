@@ -1,0 +1,438 @@
+.profile-container {
+  width: 900px;
+  height: 600px;
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: black;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.navMenu {
+  position: absolute;
+  top: 5%;
+  left: 4%;
+}
+
+.navMenu button {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 180px;
+  height: 40px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.navMenu button:hover {
+  color: #fddb3a;
+}
+
+.navMenu .button-chosen {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu button:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu button:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(270px);
+  transform: translateX(270px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu button:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(450px);
+  transform: translateX(450px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.avatar-container {
+  position: absolute;
+  height: 350px;
+  width: 250px;
+  background-color: red;
+  left: 610px;
+  bottom: 220px;
+  border-radius: 10px;
+}
+
+.button-back {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 20px 50px 20px 70px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  left: 30px;
+  top: 30px;
+  -webkit-transition: background-position 0.7s, box-shadow 0.4s;
+  transition: background-position 0.7s, box-shadow 0.4s;
+  background-size: 110%;
+  font-family: "Oswald", sans-serif;
+  height: 70px;
+  width: 300px;
+}
+
+.button-back:hover {
+  background-position: 0% 30%;
+}
+.button-back:hover:after {
+  right: -40px;
+  -webkit-transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, -webkit-transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear;
+  transition: right 0.4s, transform 30s 0.2s linear,
+    -webkit-transform 30s 0.2s linear;
+}
+.button-back:before,
+.button-back:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.button-back:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 19px;
+}
+.button-back:after {
+  -webkit-transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, -webkit-transform 0.2s;
+  transition: right 0.4s, transform 0.2s;
+  transition: right 0.4s, transform 0.2s, -webkit-transform 0.2s;
+  font-size: 100px;
+  opacity: 0.3;
+  right: -120px;
+  top: -17px;
+}
+
+.button-back {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 10px 0px #23ff04;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#23ff04)
+    ),
+    to(rgba(126, 94, 162, 0.51)),
+    url("https://img5.goodfon.ru/wallpaper/nbig/6/5c/albion-online-game-art-1.jpg");
+  background-image: linear-gradient(
+      to bottom,
+      #23ff04,
+      rgba(126, 94, 162, 0.51)
+    ),
+    url("https://img5.goodfon.ru/wallpaper/nbig/6/5c/albion-online-game-art-1.jpg");
+}
+.button-back:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset,
+    0px 0px 30px 0px #782cda;
+}
+.button-back:hover:after {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.button-back:hover:before {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.button-back:after,
+.button-back:before {
+  content: "";
+}
+.button-back b {
+  color: E7F2E5;
+  font-weight: 700;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.card-container {
+  position: absolute;
+  width: 540px;
+  height: 480px;
+  background: #2c302d;
+  background-color: transparent;
+  left: 40px;
+  top: 85px;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: auto;
+  background: #242625;
+  border-radius: 10px;
+}
+
+.card .userNameLabel {
+  text-align: left;
+  position: fixed;
+  left: 70px;
+  color: white;
+  top: 110px;
+}
+
+.card .userName {
+  text-align: left;
+  position: fixed;
+  left: 200px;
+  color: white;
+  top: 110px;
+}
+
+.card ul {
+  position: fixed;
+  left: 70px;
+  top: 200px;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 255px;
+  height: 270px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.favourite-li {
+  background: linear-gradient(rgb(255, 0, 255), rgb(0, 255, 0));
+  border-radius: 20px;
+  width: 250px;
+  height: 30px;
+  margin: 5px 5px 5px 0;
+  line-height: 30px;
+  color: rgb(24, 24, 24);
+}
+.card .gamesLabel {
+  text-align: left;
+  position: fixed;
+  left: 70px;
+  color: white;
+  top: 170px;
+}
+
+.profile-container .avatarNameLabel {
+  text-align: center;
+  position: fixed;
+  left: 565px;
+  color: white;
+  top: 390px;
+  font-size: 40px;
+  overflow: hidden;
+  line-height: 40px;
+  word-wrap: normal;
+  width: 350px;
+}
+
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  bottom: 60px;
+  position: fixed;
+  left: 70px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+  bottom: -30px;
+  left: 270px;
+  width: 200px;
+  height: 130px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.card .emailLabel {
+  text-align: left;
+  position: fixed;
+  left: 70px;
+  color: white;
+  top: 140px;
+}
+
+.card .email {
+  text-align: left;
+  position: fixed;
+  left: 200px;
+  color: white;
+  top: 140px;
+}
+
+.wrapper {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+.tabs {
+  position: relative;
+  margin: 3rem 0;
+  background: #1abc9c;
+  height: 14.75rem;
+}
+.tabs::before,
+.tabs::after {
+  content: "";
+  display: table;
+}
+.tabs::after {
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab-switch {
+  display: none;
+}
+.tab-label {
+  position: relative;
+  display: block;
+  line-height: 2.75em;
+  height: 3em;
+  padding: 0 1.618em;
+  background: #1abc9c;
+  border-right: 0.125rem solid #16a085;
+  color: #fff;
+  cursor: pointer;
+  top: 0;
+  transition: all 0.25s;
+}
+.tab-label:hover {
+  top: -0.25rem;
+  transition: top 0.25s;
+}
+.tab-content {
+  height: 12rem;
+  position: absolute;
+  z-index: 1;
+  top: 2.75em;
+  left: 0;
+  padding: 1.618rem;
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0.25rem solid #bdc3c7;
+  opacity: 0;
+  transition: all 0.35s;
+}
+.tab-switch:checked + .tab-label {
+  background: #fff;
+  color: #2c3e50;
+  border-bottom: 0;
+  border-right: 0.125rem solid #fff;
+  transition: all 0.35s;
+  z-index: 1;
+  top: -0.0625rem;
+}
+.tab-switch:checked + label + .tab-content {
+  z-index: 2;
+  opacity: 1;
+  transition: all 0.35s;
+}
