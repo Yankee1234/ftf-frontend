@@ -7,8 +7,17 @@ import { AuthGuard } from '../auth/guards/auth.guard';
 import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
-  declarations: [MainComponent],
-  imports: [CommonModule, MainRoutingModule, AuthModule, ProfileModule],
-  providers: [AuthGuard],
+  declarations: [
+    MainComponent
+  ],
+  imports: [
+    CommonModule,
+    MainRoutingModule,
+    AuthModule,
+    
+  ],
+  providers: [
+    AuthGuard
+  ]
 })
 export class MainModule {}

@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import {
   ActivatedRouteSnapshot,
   CanActivate,
+  Router,
   RouterStateSnapshot,
+  TitleStrategy,
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -15,18 +17,23 @@ import { JwtDecodedInfo } from 'src/app/domain/interfaces';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private readonly authService: AuthService) {}
+  constructor(private readonly authService: AuthService, readonly route: Router) {}
   async canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Promise<boolean> {
+    console.log('in auth guard')
+    if(this.authService.isUserInfoInLocalStorage(USER_INFO).toString() === 'false') {
+      
+      this.route.navigate(['/auth']);
+      return false;
+    }
     const info = this.authService.getUserInfoFromLocalStorage(USER_INFO);
     const decoded = jwt_decode(info.token) as JwtDecodedInfo;
 
     const expiredDate = new Date(decoded.exp);
-
     if (expiredDate < new Date()) {
-      this.authService.logout();
+      this.route.navigate(['/auth']);
       return false;
     }
 

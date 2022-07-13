@@ -16,7 +16,7 @@ import { ProfileModule } from './main/profile/profile.module';
     AuthModule,
     BrowserAnimationsModule,
     MainModule,
-    ProfileModule,
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent],
