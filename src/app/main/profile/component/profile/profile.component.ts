@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ActivatedRoute, Params, Router} from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 import { USER_INFO } from 'src/app/domain/constants';
@@ -13,6 +14,14 @@ export interface IGameInfo {
   name: number;
 }
 
+=======
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
+import { USER_INFO } from 'src/app/domain/constants';
+import { ProfileService } from '../../profile.service';
+import { UserProfile } from './dtos/user-profile.dto';
+
+>>>>>>> dev
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -25,6 +34,7 @@ export class ProfileComponent implements OnInit {
   notificationsChosen = false;
   updateProfile = false;
   yourProfile = true;
+<<<<<<< HEAD
 
   allGames: GameItem[] = [];
   userProfile: UserProfile = {
@@ -39,6 +49,12 @@ export class ProfileComponent implements OnInit {
     private readonly authService: AuthService, 
     private readonly profileService: ProfileService,
     private readonly gameService: GamesService) {}
+=======
+  
+  /* DTOs */
+
+  constructor(private readonly route: ActivatedRoute, private readonly router: Router, private readonly authService: AuthService, private readonly profileService: ProfileService) {}
+>>>>>>> dev
 
   async ngOnInit(): Promise<void> {
     const data = this.authService.getUserInfoFromLocalStorage(USER_INFO);
@@ -50,6 +66,7 @@ export class ProfileComponent implements OnInit {
 
     const profile = await this.profileService.getUserProfile(data.id);
 
+<<<<<<< HEAD
     this.userProfile = new UserProfile(profile.userName, profile.userEmail, profile.games);
 
     this.allGames = await this.gameService.getAllGames();
@@ -81,5 +98,8 @@ export class ProfileComponent implements OnInit {
 
   redirectToMain() {
     this.router.navigate(['/main'])
+=======
+    
+>>>>>>> dev
   }
 }

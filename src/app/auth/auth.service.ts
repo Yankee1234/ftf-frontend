@@ -86,7 +86,7 @@ export class AuthService {
 
   getUserInfoFromLocalStorage(key: string): UserInfo {
     const info = localStorage.getItem(key);
-    if(!info) throw new Error('There is no data in local storage by this key');
+    if (!info) throw new Error('There is no data in local storage by this key');
 
     return JSON.parse(info);
   }
@@ -99,7 +99,7 @@ export class AuthService {
   }
 
   redirectToMain() {
-    this.router.navigate(['/main'])
+    this.router.navigate(['/main']);
   }
 
   logout(redirect = true) {

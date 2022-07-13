@@ -4,8 +4,7 @@ import { MainComponent } from './component/main.component';
 import { MainRoutingModule } from './main-routing.module';
 import { AuthModule } from '../auth/auth.module';
 import { AuthGuard } from '../auth/guards/auth.guard';
-
-
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -21,4 +20,4 @@ import { AuthGuard } from '../auth/guards/auth.guard';
     AuthGuard
   ]
 })
-export class MainModule { }
+export class MainModule {}

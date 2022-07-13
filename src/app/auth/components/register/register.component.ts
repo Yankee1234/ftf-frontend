@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
       login: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
       email: new FormControl('', Validators.email),
-      userName: new FormControl(),
+      userName: new FormControl(''),
     });
   }
 
@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    const result = await this.authService.register(
+    await this.authService.register(
       new AuthRegisterRequest(
         data.login,
         data.email,
@@ -58,5 +58,7 @@ export class RegisterComponent implements OnInit {
         data.password
       )
     );
+
+    this.router.navigate(['/main'])
   }
 }

@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
       if (result === INVALID_CREDENTIALS) {
         this.invalidCredentials = true;
         this.emptyInputs = false;
+        return;
       }
 
       this.router.navigate(['/main']);
