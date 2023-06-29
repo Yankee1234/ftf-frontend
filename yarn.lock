@@ -1883,6 +1883,18 @@
     "@typescript-eslint/types" "5.29.0"
     eslint-visitor-keys "^3.3.0"
 
+"@vladimirlozinsky/babelwin-api-client@0.0.159":
+  version "0.0.159"
+  resolved "https://npm.pkg.github.com/download/@vladimirlozinsky/babelwin-api-client/0.0.159/5a1334551288efb034de7fdc84f4d9c02c0ae9cc#5a1334551288efb034de7fdc84f4d9c02c0ae9cc"
+  integrity sha512-nEQ0IIJN2h1zcyVrMg4F20HjpqCru7xeaUXHTU1WTrXTC4d4gie2OKXBWMpv2ToINhBdNXmuyAOe+C6VcdXazg==
+  dependencies:
+    axios "^0.21.1"
+
+"@vladimirlozinsky/babelwin-nuxt-api-module@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@vladimirlozinsky/babelwin-nuxt-api-module/0.0.7/06a1866367755036039a1970b42808af3cf0d1a7#06a1866367755036039a1970b42808af3cf0d1a7"
+  integrity sha512-uWUbe/G74em/biQGZwuQCc4ofVVqVz0IbrBnrqc+o0UpqxlxnY5dj2Bta3Z9Al2oLYKuryMSSapz+2MphTdPVw==
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
@@ -2260,6 +2272,13 @@ autoprefixer@^10.4.6:
     normalize-range "^0.1.2"
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
+
+axios@^0.21.1:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
 
 axios@^0.27.2:
   version "0.27.2"
@@ -3728,6 +3747,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.14.9:
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"
   integrity sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==
+
+follow-redirects@^1.14.0:
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
 
 form-data@^4.0.0:
   version "4.0.0"
