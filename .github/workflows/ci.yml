@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-          registry-url: https://npm.pkg.github.com/:_authToken=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
+          registry-url: https://npm.pkg.github.com
 
       - name: Get yarn v1 cache directory path
         id: yarn-cache-dir-path
@@ -59,3 +59,5 @@ jobs:
       - name: Install NPM modules(custom)
         if: steps.node_modules.outputs.cache-hit != 'true'
         run: yarn install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
