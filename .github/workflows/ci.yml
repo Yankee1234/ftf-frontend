@@ -26,10 +26,10 @@ jobs:
       - name: Debug branch name
         run: echo ${{ env.BRANCH_NAME }}
 
-      - name: Use Node.js 12.x
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           registry-url: https://npm.pkg.github.com
 
       - name: Get yarn v1 cache directory path
@@ -58,6 +58,4 @@ jobs:
 
       - name: Install NPM modules(custom)
         if: steps.node_modules.outputs.cache-hit != 'true'
-        run: yarn install --prefer-offline --frozen-lockfile
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_INSTALL_PRIVATE_PKG_TOKEN}}
+        run: yarn install
