@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-          registry-url: https://npm.pkg.github.com/
+          registry-url: https://npm.pkg.github.com/:authToken=${{secrets.GH_INSTALL_PRIVATE_PKG_TOKEN}}
 
       - name: Get yarn v1 cache directory path
         id: yarn-cache-dir-path
